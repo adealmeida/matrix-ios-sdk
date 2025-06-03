@@ -20,10 +20,10 @@
 
 @import AVFoundation;
 @import CallKit;
-@import UIKit;
+//@import UIKit;
 
 #import "MXCall.h"
-#import "MXCallAudioSessionConfigurator.h"
+//#import "MXCallAudioSessionConfigurator.h"
 #import "MXCallKitConfiguration.h"
 #import "MXUser.h"
 #import "MXSession.h"

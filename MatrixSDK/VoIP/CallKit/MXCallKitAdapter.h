@@ -16,13 +16,15 @@
 
 #if TARGET_OS_IPHONE
 
+#import "MXCallAudioSessionConfigurator.h"
+
 @import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class MXCall;
 @class MXCallKitConfiguration;
-@protocol MXCallAudioSessionConfigurator;
+//@protocol MXCallAudioSessionConfigurator;
 
 /**
  Posted when then system has activated AVAudioSession.

@@ -597,7 +597,7 @@ static NSMutableDictionary *fileExtensionByContentType = nil;
         fileExt = @"";
         
         // else undefined type
-        if ([contentType isEqualToString:@"application/jpeg"])
+        if ([contentType isEqualToString:@"application/jpeg"] || [contentType isEqualToString:@"image/jpeg"])
         {
             fileExt = @".jpg";
         }

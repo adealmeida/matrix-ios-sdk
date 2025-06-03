@@ -1,11 +1,14 @@
 # Uncomment this line to define a global platform for your project
 
+use_frameworks! :linkage => :static
+
 abstract_target 'MatrixSDK' do
     
     pod 'AFNetworking', '~> 4.0.0'
     pod 'GZIP', '~> 1.2.2'
-    
-    pod 'OLMKit', '~> 3.1.0', :inhibit_warnings => true
+
+    pod 'OLMKit', :git => 'https://collaborate.uhnresearch.ca/stash/scm/coco/olm.git', :commit => '78b56ffe29bcf0e56e3b85fbf695b841b545e48a', :inhibit_warnings => true
+    #pod 'OLMKit', '~> 3.1.0', :inhibit_warnings => true
     #pod 'OLMKit', :path => '../olm/OLMKit.podspec'
     
     pod 'Realm', '~> 4.4.0'

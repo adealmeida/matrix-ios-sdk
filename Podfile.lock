@@ -29,11 +29,11 @@ PODS:
   - OHHTTPStubs/NSURLSession (9.0.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (9.0.0)
-  - OLMKit (3.1.0):
-    - OLMKit/olmc (= 3.1.0)
-    - OLMKit/olmcpp (= 3.1.0)
-  - OLMKit/olmc (3.1.0)
-  - OLMKit/olmcpp (3.1.0)
+  - OLMKit (3.2.16):
+    - OLMKit/olmc (= 3.2.16)
+    - OLMKit/olmcpp (= 3.2.16)
+  - OLMKit/olmc (3.2.16)
+  - OLMKit/olmcpp (3.2.16)
   - Realm (4.4.1):
     - Realm/Headers (= 4.4.1)
   - Realm/Headers (4.4.1)
@@ -43,7 +43,7 @@ DEPENDENCIES:
   - GZIP (~> 1.2.2)
   - libbase58 (~> 0.1.4)
   - OHHTTPStubs (~> 9.0.0)
-  - OLMKit (~> 3.1.0)
+  - OLMKit (from `https://collaborate.uhnresearch.ca/stash/scm/coco/olm.git`, commit `78b56ffe29bcf0e56e3b85fbf695b841b545e48a`)
   - Realm (~> 4.4.0)
 
 SPEC REPOS:
@@ -52,17 +52,26 @@ SPEC REPOS:
     - GZIP
     - libbase58
     - OHHTTPStubs
-    - OLMKit
     - Realm
 
+EXTERNAL SOURCES:
+  OLMKit:
+    :commit: 78b56ffe29bcf0e56e3b85fbf695b841b545e48a
+    :git: https://collaborate.uhnresearch.ca/stash/scm/coco/olm.git
+
+CHECKOUT OPTIONS:
+  OLMKit:
+    :commit: 78b56ffe29bcf0e56e3b85fbf695b841b545e48a
+    :git: https://collaborate.uhnresearch.ca/stash/scm/coco/olm.git
+
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   GZIP: af5c90ef903776a7e9afe6ebebd794a84a2929d4
-  libbase58: 7c040313537b8c44b6e2d15586af8e21f7354efd
+  libbase58: 8abc2a53ac38cd37720c0acbc53ef3660e9016c2
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
-  OLMKit: 4ee0159d63feeb86d836fdcfefe418e163511639
+  OLMKit: 21c73954dcbe1b69127e062928b0339b24a910e8
   Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
 
-PODFILE CHECKSUM: 90834076de1f858ffa5f2c688b9691b058487781
+PODFILE CHECKSUM: b81b01731ee3c953c180125b17164d75a73dcddc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.15.2

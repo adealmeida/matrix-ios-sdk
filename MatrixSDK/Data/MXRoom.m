@@ -709,6 +709,18 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
             }
         }
 
+        //if the server is not reachable, fail right away.
+        if (mxSession.state == MXSessionStateHomeserverNotReachable) {
+            NSLog(@"server not reachable, flagging message as failed");
+
+            event.sentState = MXEventSentStateFailed;
+
+            // Update the stored echo.
+            [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
+
+            return nil;
+        }
+
         roomOperation = [self preserveOperationOrder:event block:^{
             MXHTTPOperation *operation = [self _sendEventOfType:eventTypeString content:contentCopy txnId:event.eventId success:onSuccess failure:onFailure];
             [roomOperation.operation mutateTo:operation];
@@ -921,6 +933,17 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
     {
         // Return the created event.
         *localEcho = event;
+    }
+
+    //if the server is not reachable, fail right away.
+    if (self.mxSession.state == MXSessionStateHomeserverNotReachable) {
+        event.sentState = MXEventSentStateFailed;
+
+        // Update message
+        [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
+
+        MXHTTPOperation *operation;
+        return operation;
     }
 
     MXWeakify(self);

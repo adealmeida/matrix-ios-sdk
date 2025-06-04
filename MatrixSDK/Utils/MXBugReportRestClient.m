@@ -33,9 +33,10 @@
 #import <OLMKit/OLMKit.h>
 #endif
 
-#if __has_include(<MatrixKit/MatrixKit.h>)
-#import <MatrixKit/MatrixKit.h>
-#endif
+// ???: MatrixSDK depends on MatrixKit?
+//#if __has_include(<MatrixKit/MatrixKit.h>)
+//#import <MatrixKit/MatrixKit.h>
+//#endif
 
 @interface MXBugReportRestClient ()
 {
@@ -198,9 +199,9 @@
             [formData appendPartWithFormData:[self.build dataUsingEncoding:NSUTF8StringEncoding] name:@"build"];
         }
 
-#if __has_include(<MatrixKit/MatrixKit.h>)
-        [formData appendPartWithFormData:[MatrixKitVersion dataUsingEncoding:NSUTF8StringEncoding] name:@"matrix_kit_version"];
-#endif
+//#if __has_include(<MatrixKit/MatrixKit.h>)
+//        [formData appendPartWithFormData:[MatrixKitVersion dataUsingEncoding:NSUTF8StringEncoding] name:@"matrix_kit_version"];
+//#endif
 
         [formData appendPartWithFormData:[MatrixSDKVersion dataUsingEncoding:NSUTF8StringEncoding] name:@"matrix_sdk_version"];
 
